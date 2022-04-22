@@ -1,0 +1,21 @@
+
+:root{
+   --colar-white: #FFFFFF;
+   --colar-black: #000000;
+   --primary-text-color: #474747;
+   --text-color: #777777;
+   --color-form: #F4F4F4;
+   --color-error: #891900;
+   --page-theme-color: #FFBA9D;
+   --color-like: #01620B;
+   --color-dislike: #A30000;
+   --color-tab: #C4C4C4;
+   --color-line: #DFDFDF;
+}
+
+@mixin flex {
+	display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+

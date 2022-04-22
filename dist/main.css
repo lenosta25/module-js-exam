@@ -1,0 +1,190 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:aftera {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --colar-white: #FFFFFF;
+  --colar-black: #000000;
+  --primary-text-color: #474747;
+  --text-color: #777777;
+  --color-form: #F4F4F4;
+  --color-error: #891900;
+  --page-theme-color: #FFBA9D;
+  --color-like: #01620B;
+  --color-dislike: #A30000;
+  --color-tab: #C4C4C4;
+  --color-line: #DFDFDF;
+}
+
+* {
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 96px 0px;
+}
+
+.header__navigation a {
+  padding: 0 24px 10px 24px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.header__navigation a:hover {
+  color: var(--page-theme-color);
+  border-bottom: 2px solid var(--page-theme-color);
+}
+
+.header .form-search {
+  width: 256px;
+  position: relative;
+}
+
+.header .form-search__field {
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  background: var(--color-form);
+  padding-left: 14px;
+  font-size: 12px;
+  color: var(--primary-text-color);
+}
+
+.header .form-search__btn {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 40px;
+  height: 40px;
+  background: var(--page-theme-color);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.header .form-search:hover {
+  border-radius: 5px;
+  border: 2px solid var(--page-theme-color);
+}
+
+.footer {
+  height: 94px;
+  background-color: var(--color-form);
+}
+
+.footer__alignment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 37px 0;
+}
+
+.footer__alignment-copyright {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--primary-text-color);
+}
+
+.footer__alignment-copyright span {
+  font-size: 15px;
+}
+
+.footer__alignment-social img {
+  padding: 0 12px;
+}
+/*# sourceMappingURL=main.css.map */
