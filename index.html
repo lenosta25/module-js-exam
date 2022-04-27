@@ -10,47 +10,219 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="/dist/main.css" />
     <title>Meliora</title>
   </head>
   <body>
     <header class="header container">
       <a href="#"><img src="/img/logo.svg" alt="logo" /></a>
-      <nav class="header__navigation">
-        <a href="#">Home</a>
-        <a href="#">Blog</a>
-        <a href="#">Contact us</a>
-        <a href="#">More</a>
-      </nav>
-      <form class="form-search" action="#" method="get">
-        <input
-          class="form-search__field"
-          name="search"
-          placeholder="Search"
-          type="search"
-        />
-        <button class="form-search__btn" type="submit">
-          <img src="/img/search.svg" alt="search" />
-        </button>
-      </form>
+      <div class="header__secttion">
+        <nav class="header__secttion-navigation">
+          <a href="#">Home</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact us</a>
+          <a href="#">More</a>
+        </nav>
+        <form class="form-search" action="#" method="get">
+          <input
+            class="form-search__field"
+            name="search"
+            placeholder="Search"
+            type="search"
+          />
+          <button class="form-search__btn" type="submit">
+            <img src="/img/search.svg" alt="search" />
+          </button>
+        </form>
+      </div>
       <!-- <button class="burger">
         <span class="burger-icon"></span>
       </button> -->
     </header>
+    <main class="main">
+      <div class="main__title container">
+        <p class="text-small">User interface</p>
+        <h1>Bad Design vs. Good Design: 5 Examples We can Learn From</h1>
+        <div class="main__title-text_row">
+          <p class="text-small">October 24.2020</p>
+          <p class="text-small">Shane Hobbins</p>
+        </div>
+      </div>
+      <div class="main__swiper">
+        <div class="swiper-wrapper container">
+          <div class="swiper-slide">
+            <img src="/img/swiper/swiper_letter.png" alt="letter" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/swiper/swiper_flower.png" alt="flower" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/swiper/swiper_texture.png" alt="texture" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/swiper/swiper_cloth.png" alt="cloth" />
+          </div>
+        </div>
+      </div>
+      <div class="main__content container">
+        <p class="text-medium">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis
+          sagittis sem ac porta. Sed commodo ligula vitae mollis tristique.
+          Maecenas egestas semper mauris. Duis tempus blandit ultrices. Proin
+          elit nulla, viverra id suscipit quis, tristique a dolor. Sed dapibus,
+          orci ac luctus tincidunt, massa erat porttitor odio, non imperdiet dui
+          risus et elit.
+        </p>
+        <h2>Information overload</h2>
+        <p class="text-medium">
+          Vivamus dictum ultrices tortor. Ut imperdiet, enim in suscipit
+          dignissim, mauris massa pellentesque augue, quis ultricies sem tortor
+          et velit.
+        </p>
+        <div class="main__content-wrapper">
+          <div class="vertical_line">
+            <p class="text-medium">
+              Sed commodo ligula vitae mollis tristique. Maecenas egestas semper
+              mauris. Duis tempus blandit ultrices. Proin elit nulla, viverra id
+              suscipit quis, tristique a dolor.
+            </p>
+            <p class="text-medium">
+              <span>&quot;</span>Designing For Sustainability, Tim Frick,
+              2014<span>&quot;</span>
+            </p>
+          </div>
+          <h2>Lessons Learnt: Best Practice</h2>
+          <ul class="text-medium">
+            <li>
+              Morbi congue odio vel luctus aliquam. Morbi accumsan sapien at
+              lorem ultricies aliquam eu eu nisl. Suspendisse.
+            </li>
+            <li>
+              Maecenas sit amet ligula auctor neque aliquam placerat et ac
+              neque. Proin risus eros, fringilla eu suscipit dignissim,
+              dignissim.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main__meta container">
+        <div class="main__meta-btn">
+          <button class="btn-tags">#HCI</button>
+          <button class="btn-tags">#Design Thinking</button>
+        </div>
+        <div class="main__meta-social">
+          <p>Share</p>
+          <a class="social__item" href="#"><i class="fa fa-facebook"></i></a>
+          <a class="social__item" href="#"><i class="fa fa-github"></i></a>
+          <a class="social__item" href="#"><i class="fa fa-twitter"></i></a>
+          <a class="social__item" href="#"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+      <hr class="horizontal-line container" />
+    </main>
+    <div class="form-container">
+      <form class="form" action="#" method="post" enctype="multipart/form-data">
+        <h2 class="form__title">Add a Comment</h2>
+        <div class="form__group">
+          <div class="form__group-item">
+            <label class="form__group-label" for="formName">Name* </label>
+            <input
+              class="form__group-input"
+              type="text"
+              name="name"
+              id="form-name"
+            />
+          </div>
+          <div class="form__group-item">
+            <label class="form__group-label" for="formEmail">Email* </label>
+            <input
+              class="form__group-input"
+              type="email"
+              name="email"
+              id="form-email"
+            />
+          </div>
+          <div class="form__group-item">
+            <label class="form__group-label" for="formWebsite">Website </label>
+            <input
+              class="form__group-input"
+              type="text"
+              name="website"
+              id="form-website"
+            />
+          </div>
+        </div>
+        <div class="form__save">
+          <label class="form__save-switch" id="save-switch">
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
+          <p class="form__save-text">
+            Save my name, email, and website in this browser for the next time I
+            comment
+          </p>
+        </div>
+        <div class="form__message">
+          <label class="form__message-text">Message*</label>
+          <a href="#"><img src="/img/emoji/smile.svg" alt="smile" /></a>
+          <a href="#"><img src="/img/emoji/wink.svg" alt="wink" /></a>
+          <a href="#"
+            ><img src="/img/emoji/pretty_smiling.svg" alt="pretty smiling"
+          /></a>
+          <a href="#"><img src="/img/emoji/peace.svg" alt="peace" /></a>
+          <a href="#"
+            ><img src="/img/emoji/indifferent.svg" alt="indifferent"
+          /></a>
+          <a href="#"><img src="/img/emoji/angry.svg" alt="angry" /></a>
+          <a href="#"><img src="/img/emoji/sad.svg" alt="sad" /></a>
+        </div>
+        <textarea
+          class="form__textarea"
+          id="body-comment"
+          name="text"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <div class="form__btn">
+          <button class="form__btn-cancel btn-size">Cancel</button>
+          <button
+            class="form__btn-post btn-size"
+            id="comment-add"
+            type="submit"
+          >
+            Post
+          </button>
+        </div>
+      </form>
+      <h2 class="comment__title">Comments</h2>
+      <div id="comment-field"></div>
+    </div>
 
     <footer class="footer">
+      <div class="footer__scrol-up">
+        <a href="#"><i class="fa fa-angle-up arrow"></i></a>
+      </div>
       <div class="footer__alignment container">
         <p class="footer__alignment-copyright">
-          Copyright <span>&copy</span> 2020 Meliora, Inc
+          Copyright <span> &copy; </span> 2020 Meliora, Inc
         </p>
         <div class="footer__alignment-social">
-          <img src="/img/social media/facebook.svg" alt="facebook" />
-          <img src="/img/social media/gitHub.svg" alt="gitHub" />
-          <img src="/img/social media/twitter.svg" alt="twitter" />
-          <img src="/img/social media/linkedln.svg" alt="linkedln" />
+          <a class="social__item" href="#"><i class="fa fa-facebook"></i></a>
+          <a class="social__item" href="#"><i class="fa fa-github"></i></a>
+          <a class="social__item" href="#"><i class="fa fa-twitter"></i></a>
+          <a class="social__item" href="#"><i class="fa fa-linkedin"></i></a>
         </div>
       </div>
     </footer>
+    <script
+      src="https://kit.fontawesome.com/665fc33ed6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="/script.js"></script>
   </body>
 </html>

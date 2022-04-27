@@ -1,21 +1,39 @@
-
-:root{
-   --colar-white: #FFFFFF;
-   --colar-black: #000000;
-   --primary-text-color: #474747;
-   --text-color: #777777;
-   --color-form: #F4F4F4;
-   --color-error: #891900;
-   --page-theme-color: #FFBA9D;
-   --color-like: #01620B;
-   --color-dislike: #A30000;
-   --color-tab: #C4C4C4;
-   --color-line: #DFDFDF;
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --primary-text-color: #474747;
+  --text-color: #777777;
+  --color-form: #f4f4f4;
+  --color-error: #891900;
+  --page-theme-color: #ffba9d;
+  --color-like: #01620b;
+  --color-dislike: #a30000;
+  --color-tab: #c4c4c4;
+  --color-line: #dfdfdf;
 }
-
-@mixin flex {
-	display: flex;
-   justify-content: space-between;
-   align-items: center;
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-
+@mixin flex-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@mixin social-inactive {
+  box-sizing: border-box;
+  padding: 0 12px;
+  font-size: 18px;
+  color: var(--primary-text-color);
+  transition: all 0.4s ease 0s ;
+}
+@mixin gray-horizontal-line {
+  background: var(--color-line);
+  height: 1px;
+  border: none;
+}
+@mixin shadow-theme {
+  box-shadow: 0 0 5px var(--page-theme-color);
+}
