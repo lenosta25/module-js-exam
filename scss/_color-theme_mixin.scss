@@ -1,3 +1,5 @@
+$container-max-width: 1120px;
+$container-padding: 160px;
 :root {
   --color-white: #ffffff;
   --color-black: #000000;
@@ -17,7 +19,7 @@
   justify-content: space-between;
   align-items: center;
 }
-@mixin flex-column{
+@mixin flex-column {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -27,7 +29,7 @@
   padding: 0 12px;
   font-size: 18px;
   color: var(--primary-text-color);
-  transition: all 0.4s ease 0s ;
+  transition: all 0.4s ease 0s;
 }
 @mixin gray-horizontal-line {
   background: var(--color-line);

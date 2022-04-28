@@ -9,6 +9,58 @@ const swiper = new Swiper(".main__swiper", {
   },
 });
 
+const navBtn = document.querySelector(".nav-btn");
+const mobileNav = document.querySelector(".mobile-nav");
+navBtn.addEventListener("click", function () {
+  mobileNav.classList.toggle("mobile-nav-active");
+  navBtn.classList.toggle("nav-btn-close");
+});
+const form = document.forms["form"];
+const formArr = Array.from(form);
+const validFormArr = [];
+const button = form.elements["comment-add"];
+
+formArr.forEach((el) => {
+  if (el.hasAttribute("data-reg")) {
+    el.setAttribute("is-valid", "0");
+    validFormArr.push(el);
+  }
+});
+
+form.addEventListener("input", inputHandler);
+button.addEventListener("click", buttonHandler);
+
+function inputHandler({ target }) {
+  if (target.hasAttribute("data-reg")) {
+    inputCheck(target);
+  }
+}
+function inputCheck(el) {
+  const inputValue = el.value;
+  const inputReg = el.getAttribute("data-reg");
+  const reg = new RegExp(inputReg);
+  if (reg.test(inputValue)) {
+    el.setAttribute("is-valid", "1");
+    el.style.border = "2px solid rgb(0, 196, 0)";
+  } else {
+    el.setAttribute("is-valid", "0");
+    el.style.border = "2px solid var(--color-error)";
+  }
+}
+function buttonHandler(e) {
+  const allValid = [];
+  validFormArr.forEach((el) => {
+    allValid.push(el.getAttribute("is-valid"));
+  });
+  const isAllValid = allValid.reduce((acc, current) => {
+    return acc && current;
+  });
+
+  if (!Boolean(Number(isAllValid))) {
+    e.preventDefault();
+  }
+}
+
 let comments = [];
 loadComments();
 document.getElementById("comment-add").onclick = function () {
@@ -59,7 +111,7 @@ function showComments() {
             </div>
           </div>
           <div class="body-answer">
-            <p style="nax-height: 94px;  word-break: break-all; line-height: 32px; font-size:16px;">${
+            <p style="max-height: 94px;  word-break: break-all; line-height: 32px; font-size:16px;">${
               item.body
             }</p>
           </div>
